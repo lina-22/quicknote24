@@ -1,0 +1,19 @@
+<script>
+  // Write an add method using javascript currying concept?
+  //  Currying is a technique of evaluating a function with multiple arguments into a sequence of functions with single/multiple arguments;
+
+  function add(x) {
+    let sum = x;
+    function resultrFn(y) {
+      sum += y;
+      return resultrFn;
+    }
+
+    resultrFn.valueOf = function () {
+      return sum;
+    };
+    return resultrFn;
+  }
+
+  console.log(add(2)(3).valueOf());
+</script>

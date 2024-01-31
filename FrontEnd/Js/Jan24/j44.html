@@ -1,0 +1,13 @@
+<script>
+  // How to replace a given string in a given Array?
+  //We will use map method to check for occurrences of the string and then use replace method to replace the string
+
+  //   input string "ban"
+  let arr = ["ban", "bangalore", "red", "banned", "banaras"];
+
+  arr = arr.map(function (x) {
+    return x.replace(/ban/g, "cat");
+  });
+
+  console.log(arr);
+</script>
